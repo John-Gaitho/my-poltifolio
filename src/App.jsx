@@ -25,7 +25,7 @@ import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
 // Initialize EmailJS with your public key
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("jzvTn2sbXvuqNVUgk");
 
 function App() {
   const formRef = useRef(null);
@@ -51,25 +51,25 @@ function App() {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "A modern web application built with React and TypeScript",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
-      github: "https://github.com/yourusername/project1",
-      live: "https://project1.com"
+      title: "Flashlean",
+      description: "A modern web application designed to help users study",
+      image: "https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-04-03/9a658be0-756e-11ea-a913-2f0af3f842f4.png",
+      github: "https://github.com/John-Gaitho/flashlearn-backend",
+      live: "https://flashlearn254.netlify.app"
     },
     {
-      title: "Project 2",
-      description: "An e-commerce platform with real-time updates",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015",
-      github: "https://github.com/yourusername/project2",
-      live: "https://project2.com"
+      title: "music-melodies",
+      description: "An e-commerce platform for managing music",
+      image: "https://camo.githubusercontent.com/1de02b4b60b49848cc428f3873ee3f60c86b69aca8a578194046cec4219029f4/68747470733a2f2f692e70636d61672e636f6d2f696d61676572792f6c696e657570732f3031436843544d5958386e6a516c3961705a356f7952692d312e2e76313536393439323830372e6a7067",
+      github: "https://github.com/John-Gaitho/music-melodies-frontend-app",
+      live: "https://music-melodies-frontend-app.vercel.app/"
     },
     {
       title: "Project 3",
       description: "A mobile-first dashboard application",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1974",
       github: "https://github.com/yourusername/project3",
-      live: "https://project3.com"
+      live: "https://music-melodies-frontend-app.vercel.app/"
     }
   ];
 
@@ -116,20 +116,21 @@ function App() {
     try {
       setIsSubmitting(true);
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        formRef.current
+        'service_scql6lg', // Replace with your EmailJS service ID
+        'template_0xkh2al', // Replace with your EmailJS template ID
+        formRef.current,
+        'jzvTn2sbXvuqNVUgk'
       );
       toast.success('Message sent successfully!');
       formRef.current.reset();
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send message. Please try again.');
+      toast.error('sorry something went wrong!!. feel free to use my contact down there.');
     } finally {
       setIsSubmitting(false);
     }
   };
-
+  console.log("📨 Sending email...");
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
       <Toaster position="top-right" />
@@ -244,9 +245,21 @@ function App() {
               alt="Profile"
               className="w-full h-full object-cover"
             />
-
-
-          </motion.div>
+            </motion.div>
+          <motion.h4 
+            className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          ></motion.h4>
+          <motion.h4 
+  className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+>
+  Hi, I'm John Gaitho, a
+</motion.h4>
           <motion.h1 
             className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -581,75 +594,76 @@ function App() {
         <ChevronUp size={20} />
       </motion.button>
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* About Column */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                Portfolio <Heart size={16} className="text-red-400" />
-              </h3>
-              <p className="text-gray-400">
-                Thank you for visiting my portfolio. I'm passionate about creating beautiful, functional software.
-              </p>
-              <div className="flex gap-4 pt-2">
-                {socialLinks.map((link) => (
-                  <motion.a
-                    key={link.name}
-                    href={link.href}
-                    aria-label={link.name}
-                    className="text-gray-400 hover:text-white transition-colors"
-                    whileHover={{ scale: 1.2, color: '#fff' }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    {link.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <motion.a
-                      href={item.href}
-                      className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                      whileHover={{ x: 8, color: '#fff' }}
-                    >
-                      {item.icon}
-                      <span>{item.name}</span>
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
-              <div className="space-y-2 text-gray-400">
-                <p className="flex items-center gap-2">
-                  <Mail size={16} />
-                  <a href="mailto:your.email@example.com" className="hover:text-white">jgaitho016@gmail.com</a>
-                </p>
-                <p>Based in Nairobi, Kenya</p>
-                <p>Available for remote work worldwide</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} John. All rights reserved.</p>
-            <p className="text-sm mt-2">
-              Crafted with <span className="text-red-400">♥</span> and modern technologies
-            </p>
-          </div>
+      <footer className="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900 text-gray-900 dark:text-white py-12">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      {/* About Column */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+          Portfolio <Heart size={16} className="text-red-500" />
+        </h3>
+        <p className="text-gray-800 dark:text-gray-300">
+          Thank you for visiting my portfolio. 
+        </p>
+        <div className="flex gap-4 pt-2">
+          {socialLinks.map((link) => (
+            <motion.a
+              key={link.name}
+              href={link.href}
+              aria-label={link.name}
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {link.icon}
+            </motion.a>
+          ))}
         </div>
-      </footer>
+      </div>
+
+      {/* Quick Links */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+        <ul className="space-y-2">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <motion.a
+                href={item.href}
+                className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors flex items-center gap-2"
+                whileHover={{ x: 8 }}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </motion.a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Contact Info */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
+        <div className="space-y-2 text-gray-800 dark:text-gray-300">
+          <p className="flex items-center gap-2">
+            <Mail size={16} />
+            <a href="mailto:jgaitho016@gmail.com" className="hover:text-gray-900 dark:hover:text-white">jgaitho016@gmail.com</a>
+          </p>
+          <p>Based in Nairobi, Kenya</p>
+          <p>0718634116</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="border-t border-gray-400 dark:border-gray-700 mt-8 pt-8 text-center text-gray-700 dark:text-gray-400">
+      <p>© {new Date().getFullYear()} John. All rights reserved.</p>
+      <p className="text-sm mt-2">
+        Crafted with <span className="text-red-500">♥</span> 
+      </p>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
