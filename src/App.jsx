@@ -43,15 +43,15 @@ function App() {
   }, [darkMode]);
 
   const skills = [
-    { category: "Frontend", icon: <Layout className="w-6 h-6" />, items: ["React", "TypeScript", "React.js", "Tailwind CSS"] },
-    { category: "Backend", icon: <Server className="w-6 h-6" />, items: ["Node.js", "Express", "Python",] },
-    { category: "Database", icon: <Database className="w-6 h-6" />, items: ["PostgreSQL", "MongoDB", "Redis", "Firebase"] },
-    { category: "Tools", icon: <Code className="w-6 h-6" />, items: ["Git", "AWS", "Linux"] }
+    { category: "Frontend", icon: <Layout className="w-6 h-6" />, items: ["React","Javascript", "TypeScript","Tailwind CSS"] },
+    { category: "Backend", icon: <Server className="w-6 h-6" />, items: ["Node.js","Flask", "Python",] },
+    { category: "Database", icon: <Database className="w-6 h-6" />, items: ["PostgreSQL","SQlite", ] },
+    { category: "Tools", icon: <Code className="w-6 h-6" />, items: ["Git","Github", "AWS","vercel", "Linux"] }
   ];
 
   const projects = [
     {
-      title: "Flashlean",
+      title: "Flashlearn",
       description: "A modern web application designed to help users study",
       image: "https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-04-03/9a658be0-756e-11ea-a913-2f0af3f842f4.png",
       github: "https://github.com/John-Gaitho/flashlearn-backend",
@@ -235,7 +235,7 @@ function App() {
       >
         <div className="text-center">
           <motion.div
-            className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden"
+            className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -461,7 +461,7 @@ function App() {
                     ? 'border-blue-500 shadow-md dark:border-blue-400' 
                     : 'border-gray-200 dark:border-gray-600'
                 }`}
-                placeholder=" "
+                placeholder="Name "
               />
               <label 
                 htmlFor="name" 
@@ -473,7 +473,7 @@ function App() {
                   formRef.current?.user_name?.value ? 'text-xs -top-2.5' : ''
                 }`}
               >
-                Name
+                
               </label>
             </div>
             
@@ -490,7 +490,7 @@ function App() {
                     ? 'border-blue-500 shadow-md dark:border-blue-400' 
                     : 'border-gray-200 dark:border-gray-600'
                 }`}
-                placeholder=" "
+                placeholder="Email "
               />
               <label 
                 htmlFor="email" 
@@ -502,7 +502,7 @@ function App() {
                   formRef.current?.user_email?.value ? 'text-xs -top-2.5' : ''
                 }`}
               >
-                Email
+                
               </label>
             </div>
             
@@ -549,7 +549,7 @@ function App() {
                     ? 'border-blue-500 shadow-md dark:border-blue-400' 
                     : 'border-gray-200 dark:border-gray-600'
                 }`}
-                placeholder=" "
+                placeholder="Message "
               ></motion.textarea>
               <label 
                 htmlFor="message" 
@@ -561,7 +561,7 @@ function App() {
                   formRef.current?.message?.value ? 'text-xs -top-2.5' : ''
                 }`}
               >
-                Message
+                
               </label>
             </div>
             
