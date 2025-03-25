@@ -52,25 +52,26 @@ function App() {
   const projects = [
     {
       title: "Flashlearn",
-      description: "A modern web application designed to help users study",
+      description: "A modern web application designed to help learners study",
       image: "https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-04-03/9a658be0-756e-11ea-a913-2f0af3f842f4.png",
       github: "https://github.com/John-Gaitho/flashlearn-backend",
       live: "https://flashlearn254.netlify.app"
     },
     {
+      title: "Resume generator",
+      description: "A desktop application to generate professional resume",
+      image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/486537115_122117726318801425_4205279486133974539_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9-fqG9HboVAQ7kNvgEKy1hi&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=SdViFPkYrcW_Tu5OCY5X9A&oh=00_AYHyCIo2uQ2kOX6n1KSmxOzy6ylkadtqBM62fWF_bUDGiA&oe=67E8364C",
+      github: "https://github.com/John-Gaitho/my-react-app",
+      live: "https://my-react-app-ten-zeta.vercel.app/"
+    },
+    {
       title: "music-melodies",
-      description: "An e-commerce platform for managing music",
+      description: "A platform for managing music",
       image: "https://camo.githubusercontent.com/1de02b4b60b49848cc428f3873ee3f60c86b69aca8a578194046cec4219029f4/68747470733a2f2f692e70636d61672e636f6d2f696d61676572792f6c696e657570732f3031436843544d5958386e6a516c3961705a356f7952692d312e2e76313536393439323830372e6a7067",
       github: "https://github.com/John-Gaitho/music-melodies-frontend-app",
       live: "https://music-melodies-frontend-app.vercel.app/"
-    },
-    {
-      title: "Project 3",
-      description: "A mobile-first dashboard application",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1974",
-      github: "https://github.com/yourusername/project3",
-      live: "https://music-melodies-frontend-app.vercel.app/"
     }
+
   ];
 
   const subjects = [
@@ -145,7 +146,7 @@ function App() {
                 className="text-2xl font-bold text-gray-900 dark:text-white"
                 whileHover={{ scale: 1.05 }}
               >
-                Portfolio
+                John
               </motion.a>
             </div>
 
@@ -386,7 +387,7 @@ function App() {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-white dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Some of my Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -519,7 +520,7 @@ function App() {
                     : 'border-gray-200 dark:border-gray-600'
                 }`}
               >
-                <option value="">Select a subject</option>
+                <option value="">Select subject</option>
                 {subjects.map((subject) => (
                   <option key={subject} value={subject}>{subject}</option>
                 ))}
