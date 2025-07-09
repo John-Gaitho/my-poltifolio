@@ -60,14 +60,14 @@ function App() {
     {
       title: "Resume generator",
       description: "A desktop application to generate professional resume",
-      image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/486537115_122117726318801425_4205279486133974539_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9-fqG9HboVAQ7kNvgEKy1hi&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=SdViFPkYrcW_Tu5OCY5X9A&oh=00_AYHyCIo2uQ2kOX6n1KSmxOzy6ylkadtqBM62fWF_bUDGiA&oe=67E8364C",
+      image: "https://riseuplabs.com/wp-content/uploads/2024/01/riseuplabs-launched-resumake-insight-feature-image.jpg",
       github: "https://github.com/John-Gaitho/my-react-app",
       live: "https://my-react-app-ten-zeta.vercel.app/"
     },
     {
       title: "Kauru Dairy",
       description: "A simple Dairy website",
-      image: "public/Screenshot 2025-07-09 135006 (1).PNG",
+      image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/515499107_122104517108932437_3879995290799681750_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=I0zYAx9RCAcQ7kNvwGO09dm&_nc_oc=Adlkudtl-dRffs2zS2g3ziY0Aqy4IWIz-yFy08_7pUe9bJeiojuWnCEXZbPlqsPrBK0&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=699j_pH2OHwMvN85-Fv7OQ&oh=00_AfQhGZM4wbymg6l0BXJpcxeCezEreOe8hEma1VttSOV5Tg&oe=68741089",
       github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
       live: "https://kauru-dairy-ltd.vercel.app/"
     }
