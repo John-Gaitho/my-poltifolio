@@ -65,11 +65,11 @@ function App() {
       live: "https://my-react-app-ten-zeta.vercel.app/"
     },
     {
-      title: "music-melodies",
-      description: "A platform for managing music",
-      image: "https://camo.githubusercontent.com/1de02b4b60b49848cc428f3873ee3f60c86b69aca8a578194046cec4219029f4/68747470733a2f2f692e70636d61672e636f6d2f696d61676572792f6c696e657570732f3031436843544d5958386e6a516c3961705a356f7952692d312e2e76313536393439323830372e6a7067",
-      github: "https://github.com/John-Gaitho/music-melodies-frontend-app",
-      live: "https://music-melodies-frontend-app.vercel.app/"
+      title: "Kauru Dairy",
+      description: "A simple Dairy website",
+      image: "public/Screenshot 2025-07-09 135006 (1).PNG",
+      github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
+      live: "https://kauru-dairy-ltd.vercel.app/"
     }
 
   ];
@@ -275,7 +275,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            Building beautiful, functional, and scalable web applications
+            Building functional, and scalable web applications
           </motion.p>
           <motion.div 
             className="flex justify-center gap-6"
@@ -331,7 +331,7 @@ function App() {
             I'm a passionate full-stack developer. 
              I focus on creating 
             efficient, scalable, and user-friendly solutions that solve real-world problems.
-            I graduated from Moringa School where i studied my software engeneering course.
+            
           </motion.p>
           <motion.p 
             className="text-lg text-gray-600 dark:text-gray-300"
