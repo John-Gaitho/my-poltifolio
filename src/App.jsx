@@ -60,7 +60,7 @@ function App() {
     {
       title: "Resume generator",
       description: "A desktop application to generate professional resume",
-      image: "https://riseuplabs.com/wp-content/uploads/2024/01/riseuplabs-launched-resumake-insight-feature-image.jpg",
+      image: "/Screenshot 2025-07-14 135329 resume geneator.PNG",
       github: "https://github.com/John-Gaitho/my-react-app",
       live: "https://my-react-app-ten-zeta.vercel.app/"
     },
