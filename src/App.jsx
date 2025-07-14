@@ -67,7 +67,7 @@ function App() {
     {
       title: "Kauru Dairy",
       description: "A simple Dairy website",
-      image: "public/Screenshot 2025-07-09 135006 (1).PNG",
+      image: "/Screenshot 2025-07-09 135006 (1).PNG",
       github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
       live: "https://kauru-dairy-ltd.vercel.app/"
     }
@@ -324,7 +324,7 @@ function App() {
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
     >
       <img
-        src="public\WhatsApp Image 2025-07-14 at 13.33.21_5b094731.jpg"          
+        src="/WhatsApp Image 2025-07-14 at 13.33.21_5b094731.jpg"          
         alt=""
         className="w-full h-full object-cover"
       />
