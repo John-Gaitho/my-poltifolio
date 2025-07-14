@@ -67,7 +67,7 @@ function App() {
     {
       title: "Kauru Dairy",
       description: "A simple Dairy website",
-      image: "https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/515499107_122104517108932437_3879995290799681750_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=I0zYAx9RCAcQ7kNvwGO09dm&_nc_oc=Adlkudtl-dRffs2zS2g3ziY0Aqy4IWIz-yFy08_7pUe9bJeiojuWnCEXZbPlqsPrBK0&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=699j_pH2OHwMvN85-Fv7OQ&oh=00_AfQhGZM4wbymg6l0BXJpcxeCezEreOe8hEma1VttSOV5Tg&oe=68741089",
+      image: "public/Screenshot 2025-07-09 135006 (1).PNG",
       github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
       live: "https://kauru-dairy-ltd.vercel.app/"
     }
@@ -311,40 +311,61 @@ function App() {
         </div>
       </motion.section>
 
-      {/* About Section */}
       <section id="about" className="py-20 px-4 bg-white dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2 
-            className="text-4xl font-bold text-center mb-8 dark:text-white"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            About Me
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-gray-600 dark:text-gray-300 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            I'm a passionate full-stack developer. 
-             I focus on creating 
-            efficient, scalable, and user-friendly solutions that solve real-world problems.
-            
-          </motion.p>
-          <motion.p 
-            className="text-lg text-gray-600 dark:text-gray-300"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            I enjoy working with modern technologies and am always eager to learn and adapt 
-            to new challenges in the ever-evolving tech landscape.
-          </motion.p>
-        </div>
-      </section>
+  <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    {/* ▶️  NEW IMAGE BLOCK  ◀️ */}
+    <motion.div
+      className="flex-shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg
+                 ring-4 ring-blue-500/30 dark:ring-blue-400/30"
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ type: "spring", stiffness: 260, damping: 20 }}
+    >
+      <img
+        src="public\WhatsApp Image 2025-07-14 at 13.33.21_5b094731.jpg"          
+        alt="John Gaitho portrait"
+        className="w-full h-full object-cover"
+      />
+    </motion.div>
+
+    {/* Text column stays the same */}
+    <div>
+      <motion.h2
+        className="text-4xl font-bold mb-6 dark:text-white"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        About Me
+      </motion.h2>
+
+      <motion.p
+        className="text-lg text-gray-600 dark:text-gray-300 mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        I’m a passionate full‑stack developer focused on creating efficient,
+        scalable, and user‑friendly solutions that solve real‑world problems.
+      </motion.p>
+
+      <motion.p
+        className="text-lg text-gray-600 dark:text-gray-300"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+      >
+        I enjoy working with modern technologies and am always eager to learn
+        and adapt to new challenges in the ever‑evolving tech landscape.
+      </motion.p>
+    </div>
+  </div>
+</section>
+
+      
 
       {/* Skills Section */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
