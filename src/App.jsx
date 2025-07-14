@@ -325,7 +325,7 @@ function App() {
     >
       <img
         src="public\WhatsApp Image 2025-07-14 at 13.33.21_5b094731.jpg"          
-        alt="John Gaitho portrait"
+        alt=""
         className="w-full h-full object-cover"
       />
     </motion.div>
