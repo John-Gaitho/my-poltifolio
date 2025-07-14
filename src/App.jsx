@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaWhatsapp } from 'react-icons/fa';
+
 import { 
   Github, 
   Linkedin, 
@@ -91,7 +93,8 @@ function App() {
   const socialLinks = [
     { name: "GitHub", icon: <Github size={20} />, href: "https://github.com/John-Gaitho" },
     { name: "LinkedIn", icon: <Linkedin size={20} />, href: "https://linkedin.com/in/yourusername" },
-    { name: "Email", icon: <Mail size={20} />, href: "mailto:jgaitho@gmail.com" }
+    { name: "Email", icon: <Mail size={20} />, href: "mailto:jgaitho@gmail.com" },
+    { name: "WhatsApp", icon: <FaWhatsapp size={20} />, href: "https://wa.me/254718634116" }
   ];
 
   const handleFocus = (id) => {
@@ -285,7 +288,7 @@ function App() {
           >
             <motion.a 
               href="https://github.com/John-Gaitho" 
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -293,7 +296,7 @@ function App() {
             </motion.a>
             <motion.a 
               href="https://linkedin.com/in/John-Gaitho" 
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -301,12 +304,21 @@ function App() {
             </motion.a>
             <motion.a 
               href="mailto:jgaitho016@gmail.com" 
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                 className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <Mail size={24} />
             </motion.a>
+            <motion.a
+    href="https://wa.me/254718634116"
+    className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+    whileHover={{ scale: 1.2 }}
+    whileTap={{ scale: 0.9 }}
+    aria-label="WhatsApp"
+  >
+    <FaWhatsapp size={24} />
+  </motion.a>
           </motion.div>
         </div>
       </motion.section>
