@@ -71,7 +71,7 @@ function App() {
       description: "A simple Dairy website",
       image: "/Screenshot 2025-07-09 135006 (1).PNG",
       github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
-      live: "https://kauru-dairy-ltd.vercel.app/"
+      live: "https://kauru-dairy-ltd.app/"
     }
 
   ];
