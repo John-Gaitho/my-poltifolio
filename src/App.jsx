@@ -52,29 +52,52 @@ function App() {
   ];
 
   const projects = [
-    {
-      title: "Flashlearn",
-      description: "A modern web application designed to help learners study",
-      image: "https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-04-03/9a658be0-756e-11ea-a913-2f0af3f842f4.png",
-      github: "https://github.com/John-Gaitho/flashlearn-backend",
-      live: "https://flashlearn254.netlify.app"
-    },
-    {
-      title: "Resume generator",
-      description: "A desktop application to generate professional resume",
-      image: "/Screenshot 2025-07-14 135329 resume geneator.PNG",
-      github: "https://github.com/John-Gaitho/my-react-app",
-      live: "https://my-react-app-ten-zeta.vercel.app/"
-    },
-    {
-      title: "Kauru Dairy",
-      description: "A simple Dairy website",
-      image: "/Screenshot 2025-07-09 135006 (1).PNG",
-      github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
-      live: "https://kauru-dairy-ltd.app/"
-    }
+  {
+    title: "Flashlearn",
+    description: "A modern web application designed to help learners study.",
+    image: "https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-04-03/9a658be0-756e-11ea-a913-2f0af3f842f4.png",
+    github: "https://github.com/John-Gaitho/flashlearn-backend",
+    live: "https://flashlearn254.netlify.app"
+  },
+  {
+    title: "Resume Generator",
+    description: "A desktop application that helps users create professional resumes.",
+    image: "/resume-generator.PNG",
+    github: "https://github.com/John-Gaitho/my-react-app",
+    live: "https://my-react-app-ten-zeta.vercel.app/"
+  },
+  {
+    title: "Kauru Dairy",
+    description: "Website for a dairy company.",
+    image: "/kauru-dairy.PNG",
+    github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
+    live: "https://kauru-dairy-ltd.app/"
+  },
+  {
+    title: "Security Company",
+    description: "A company profile website built using TypeScript and React.(PRIVATE)",
+    image: "/security.jpg",
+    github: "",
+    live: ""
+  },
+  {
+    title: "Chat Box",
+    description: "An end-to-end encrypted private chat platform. (PRIVATE)",
+    image: "/chat-box.png",
+    github: "",
+    live: ""
+  },
+  {
+    title: "E-commerce Website",
+    description: "A business e-commerce web application built using JavaScript, Tailwind CSS, and Python for the backend.",
+    image: "/branded-in-g.jpg",
+    github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
+    live: "https://kauru-dairy-ltd.app/"
+  }
+];
 
-  ];
+
+  
 
   const subjects = [
     "Job Opportunity",
@@ -336,7 +359,7 @@ function App() {
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
     >
       <img
-        src="/WhatsApp Image 2025-07-14 at 13.33.21_5b094731.jpg"          
+        src="/mine.jpg"          
         alt=""
         className="w-full h-full object-cover"
       />
