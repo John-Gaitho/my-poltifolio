@@ -74,9 +74,9 @@ function App() {
     live: "https://kauru-dairy-ltd.app/"
   },
   {
-    title: "Security Company",
-    description: "A company profile website built using TypeScript and React.(PRIVATE)",
-    image: "/security.jpg",
+    title: "inkwell",
+    description: "A blogging platform that allows users to  view, create and share blog posts.",
+    image: "/inkwell.png",
     github: "",
     live: ""
   },
