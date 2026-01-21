@@ -45,13 +45,22 @@ function App() {
   }, [darkMode]);
 
   const skills = [
-    { category: "Frontend", icon: <Layout className="w-6 h-6" />, items: ["React","Javascript", "TypeScript","Tailwind CSS"] },
-    { category: "Backend", icon: <Server className="w-6 h-6" />, items: ["Node.js","Flask", "Python",] },
+    { category: "Frontend", icon: <Layout className="w-6 h-6" />, items: ["React","Javascript", "HTML","Tailwind CSS","jQuery","CSS3"] },
+    { category: "Backend", icon: <Server className="w-6 h-6" />, items: ["Node.js","Flask", "Python","PHP"] },
     { category: "Database", icon: <Database className="w-6 h-6" />, items: ["PostgreSQL","SQlite", ] },
-    { category: "Tools", icon: <Code className="w-6 h-6" />, items: ["Git","Github", "AWS","vercel", "Linux"] }
+    { category: "UI/UX", icon: <Briefcase className="w-6 h-6" />, items: ["Figma","Adobe XD", "Canva"] },
+    { category: "Tools", icon: <Code className="w-6 h-6" />, items: ["Git","Github", "AWS","vercel", "Linux"] },
+    { category: "APIs", icon: <MessageSquare className="w-6 h-6" />, items: ["REST API"] }
   ];
 
   const projects = [
+    {
+    title: "inkwell",
+    description: "A blogging platform that allows users to  view, create and share blog posts.",
+    image: "/inkwell.png",
+    github: "",
+    live: "https://innkwell.vercel.app/"
+  },
   {
     title: "Flashlearn",
     description: "A modern web application designed to help learners study.",
@@ -71,14 +80,7 @@ function App() {
     description: "Website for a dairy company.",
     image: "/kauru-dairy.PNG",
     github: "https://github.com/John-Gaitho/music-melodi-frontend-app",
-    live: "https://kauru-dairy-ltd.app/"
-  },
-  {
-    title: "inkwell",
-    description: "A blogging platform that allows users to  view, create and share blog posts.",
-    image: "/inkwell.png",
-    github: "",
-    live: ""
+    live: "https://kauru-dairy-ltd.vercel.app/"
   },
   {
     title: "Chat Box",
