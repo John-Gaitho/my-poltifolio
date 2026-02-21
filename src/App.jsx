@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
-
+import logo from './assets/logo.png';
 import { 
   Github, 
   Linkedin, 
@@ -35,6 +35,14 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeInput, setActiveInput] = useState (null);
+
+  const [logoLoaded, setLogoLoaded] = useState(false);
+
+useEffect(() => {
+  setTimeout(() => {
+    setLogoLoaded(true);
+  }, 400);
+}, []);
   
   useEffect(() => {
     if (darkMode) {
@@ -165,74 +173,99 @@ function App() {
       <Toaster position="top-right" />
       
       {/* Navbar */}
-      <nav className="fixed w-full z-50 bg-white dark:bg-gray-800 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <motion.a
-                href="#"
-                className="text-2xl font-bold text-gray-900 dark:text-white"
-                whileHover={{ scale: 1.05 }}
-              >
-                John
-              </motion.a>
-            </div>
+<nav className="fixed w-full z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg transition-all duration-300">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between h-16 items-center">
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </motion.a>
-              ))}
-            </div>
+      {/* Logo Section */}
+      <motion.a
+        href="#home"
+        className="flex items-center gap-3"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: logoLoaded ? 1 : 0, y: logoLoaded ? 0 : -20 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="relative"
+          whileHover={{ scale: 1.08 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          {/* Glow Effect */}
+          <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full"></div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-600 dark:text-gray-300"
-              >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </motion.button>
-            </div>
-          </div>
-        </div>
+          <motion.img
+            src={logo}
+            alt="John Gaitho Logo"
+            className="relative h-14 w-auto"
+            whileHover={{ rotate: 2 }}
+          />
+        </motion.div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white dark:bg-gray-800"
+        <motion.span
+          className="text-lg font-semibold tracking-wide text-gray-900 dark:text-white"
+          whileHover={{ letterSpacing: "2px" }}
+          transition={{ duration: 0.3 }}
+        >
+          
+        </motion.span>
+      </motion.a>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <motion.a
+            key={item.name}
+            href={item.href}
+            className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            whileHover={{ scale: 1.1 }}
+          >
+            {item.icon}
+            <span>{item.name}</span>
+          </motion.a>
+        ))}
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex items-center">
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-gray-600 dark:text-gray-300"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </motion.button>
+      </div>
+
+    </div>
+  </div>
+
+  {/* Mobile Navigation */}
+  <AnimatePresence>
+    {isMenuOpen && (
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "auto" }}
+        exit={{ opacity: 0, height: 0 }}
+        className="md:hidden bg-white dark:bg-gray-800 shadow-lg"
+      >
+        <div className="px-4 pt-4 pb-6 space-y-4">
+          {navItems.map((item) => (
+            <motion.a
+              key={item.name}
+              href={item.href}
+              className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => setIsMenuOpen(false)}
             >
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navItems.map((item) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center space-x-2 px-3 py-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    whileHover={{ scale: 1.05 }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.icon}
-                    <span>{item.name}</span>
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+              {item.icon}
+              <span>{item.name}</span>
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</nav>
 
       {/* Dark Mode Toggle */}
       <motion.button
